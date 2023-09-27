@@ -1,0 +1,69 @@
+{
+  "name": "valantic-spryker/navigation-generator",
+  "type": "library",
+  "description": "Generates navigation-node.csv based on imported category data",
+  "require": {
+    "php": ">=8.0",
+    "spryker/kernel": "^3.0.0",
+    "spryker/store": "^1.0.0",
+    "spryker/category": "^5.0.0",
+    "spryker/category-storage": "^2.1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "ValanticSpryker\\": "src/ValanticSpryker/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ValanticSprykerTest\\": "tests/ValanticSprykerTest/",
+      "Generated\\": "src/Generated/",
+      "Orm\\Zed\\": "src/Orm/Zed/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "platform": {
+      "php": "8.0.19"
+    },
+    "preferred-install": "dist",
+    "use-include-path": true,
+    "sort-packages": true,
+    "github-protocols": [
+      "https"
+    ],
+    "process-timeout": 900,
+    "chromium-revision": 814168,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "authors": [
+    {
+      "name": "Valantic",
+      "homepage": "https://www.valantic.com"
+    }
+  ],
+  "keywords": [
+    "spryker"
+  ],
+  "include-path": [
+    "src/"
+  ],
+  "require-dev": {
+    "fond-of-codeception/spryker": "^1.0 || ^2.0",
+    "spryker-sdk/phpstan-spryker": "*",
+    "spryker/architecture-sniffer": "*",
+    "spryker/code-sniffer": "*",
+    "spryker/development": "*",
+    "spryker/testify": "*"
+  },
+  "scripts": {
+    "cs-fix": "phpcbf --standard=phpcs.xml src",
+    "cs-check": "phpcs -s --standard=phpcs.xml --report=full src",
+    "md-check": "phpmd src/ text phpmd-ruleset.xml --minimumpriority 2",
+    "stan": "php -d memory_limit=3072M vendor/bin/phpstan analyze -l 4 src/ValanticSpryker/",
+    "test": "codecept run --env standalone --coverage-text --no-colors --coverage-html"
+  }
+}

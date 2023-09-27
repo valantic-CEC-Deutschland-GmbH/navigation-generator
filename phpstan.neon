@@ -1,0 +1,23 @@
+parameters:
+    level: 4
+    reportUnmatchedIgnoredErrors: false
+    scanDirectories:
+        - src/Orm/Zed
+        - src/Generated
+    ignoreErrors:
+        - '#.* on an unknown class Generated\\(Client|Glue|Service|Yves|Zed)\\.*#'
+        - '#.*Access to undefined constant Orm\\Zed\\.*#'
+        - '#.*Call to an undefined method Orm\\Zed\\.*#'
+        - '#Dead catch - Exception is never thrown in the try block.#'
+
+    bootstrapFiles:
+        - '%rootDir%/../../../phpstan-bootstrap.php'
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+
+    dynamicConstantNames:
+        - APPLICATION
+        - APPLICATION_ENV
+        - APPLICATION_STORE
+        - APPLICATION_CODE_BUCKET

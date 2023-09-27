@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ruleset name="SprykerProject">
+    <description>
+        Spryker Coding Standard for Project.
+
+        Extends main Spryker Coding Standard.
+        All sniffs in ./Sniffs will be auto loaded
+    </description>
+
+    <rule ref="./vendor/spryker/code-sniffer/Spryker/ruleset.xml">
+        <exclude name="Spryker.Commenting.FileDocBlock"/>
+        <exclude name="Spryker.Formatting.MethodSignatureParametersLineBreakMethod"/>
+        <exclude name="Spryker.PHP.SingleQuote"/>
+        <exclude name="Spryker.Classes.ReturnTypeHint"/>
+        <exclude name="Generic.Files.LineLength.TooLong"/>
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator"/>
+        <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion"/>
+        <exclude name="SlevomatCodingStandard.Functions.DisallowNamedArguments"/>
+    </rule>
+
+    <rule ref="./vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml">
+        <exclude name="SprykerStrict.TypeHints.ParameterTypeHint"/>
+        <exclude name="SprykerStrict.TypeHints.PropertyTypeHint"/>
+        <exclude name="Spryker.Commenting.FileDocBlock"/>
+        <exclude name="SlevomatCodingStandard.Classes.ConstantSpacing"/>
+        <exclude name="Spryker.Commenting.DocBlockConst"/>
+    </rule>
+
+    <exclude-pattern>*/src/Generated/*</exclude-pattern>
+    <exclude-pattern>*/src/Orm/*</exclude-pattern>
+    <exclude-pattern>*/tests/_support/_generated/*</exclude-pattern>
+    <exclude-pattern>*/tests/*/_support/_generated/*</exclude-pattern>
+    <exclude-pattern>*/tests/*/_support/*Tester.php</exclude-pattern>
+    <exclude-pattern>*/tests/_helpers/*</exclude-pattern>
+    <exclude-pattern>*/tests/_output/*</exclude-pattern>
+    <exclude-pattern>./data/DE/*</exclude-pattern>
+    <exclude-pattern>./data/AT/*</exclude-pattern>
+    <exclude-pattern>./data/SH/*</exclude-pattern>
+    <exclude-pattern>./data/PZ/*</exclude-pattern>
+    <exclude-pattern>./data/US/*</exclude-pattern>
+    <exclude-pattern>./public</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <!-- Define your own sniffs here -->
+
+    <rule ref="Spryker.Internal.SprykerDisallowFunctions">
+        <properties>
+            <!-- We want to prevent 8.0+ functions to break 7.4 compatibility -->
+            <property name="phpVersion" value="8.0"/>
+        </properties>
+    </rule>
+    <!-- specific sniffs to include -->
+    <rule ref="./vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/DeclareStrictTypesSniff.php" />
+
+</ruleset>

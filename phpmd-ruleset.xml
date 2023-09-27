@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="Spryker PHPMD Rule Set"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        Extends Spryker's PHP Mess Detector Rule Set
+    </description>
+
+    <exclude-pattern>tests/_data</exclude-pattern>
+    <exclude-pattern>tests/_output</exclude-pattern>
+    <exclude-pattern>tests/_support</exclude-pattern>
+    <exclude-pattern>*/Persistence/Base/*</exclude-pattern>
+    <exclude-pattern>*/Persistence/Map/*</exclude-pattern>
+    <exclude-pattern>*/Orm/Propel/*</exclude-pattern>
+    <exclude-pattern>*/Generated/*</exclude-pattern>
+    <exclude-pattern>*Zed/DataImport/*</exclude-pattern>
+
+    <rule ref="./vendor/spryker/development/resources/phpmd/ruleset.xml">
+        <exclude name="LongClassName"/>
+    </rule>
+
+    <rule ref="./vendor/spryker/architecture-sniffer/src/ruleset.xml">
+        <exclude name="NewPluginExtensionModuleRule"/>
+        <exclude name="PluginSuffixRule"/>
+        <exclude name="FactoryPropelQueryMethodNameRule"/>
+        <exclude name="ImplementsApiInheritDocRule"/>
+        <exclude name="FactoryMethodReturnInterfaceRule"/>
+        <exclude name="FactoryOnlyPublicMethodsRule"/>
+        <exclude name="ZedDependencyProviderPropelQueryConstantNameRule"/>
+        <exclude name="ZedBusinessDirectoryNoModelRule"/>
+        <exclude name="ZedDependencyProviderMethodNameRule"/>
+    </rule>
+</ruleset>
