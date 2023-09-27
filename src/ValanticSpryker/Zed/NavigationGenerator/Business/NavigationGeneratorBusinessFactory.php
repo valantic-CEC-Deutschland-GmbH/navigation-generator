@@ -4,12 +4,12 @@ declare(strict_types = 1);
 
 namespace ValanticSpryker\Zed\NavigationGenerator\Business;
 
-use ValanticSpryker\Zed\NavigationGenerator\Business\Model\NavigationNodeFileGenerator;
-use ValanticSpryker\Zed\NavigationGenerator\NavigationGeneratorDependencyProvider;
 use Spryker\Client\CategoryStorage\CategoryStorageClientInterface;
 use Spryker\Zed\Category\Business\CategoryFacadeInterface;
 use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 use Spryker\Zed\Store\Business\StoreFacadeInterface;
+use ValanticSpryker\Zed\NavigationGenerator\Business\Model\NavigationNodeFileGenerator;
+use ValanticSpryker\Zed\NavigationGenerator\NavigationGeneratorDependencyProvider;
 
 /**
  * @method \ValanticSpryker\Zed\NavigationGenerator\NavigationGeneratorConfig getConfig()

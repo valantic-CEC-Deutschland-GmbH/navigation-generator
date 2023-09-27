@@ -5,10 +5,10 @@ declare(strict_types = 1);
 namespace ValanticSpryker\Zed\NavigationGenerator\Business\Model;
 
 use Generated\Shared\Transfer\CategoryNodeStorageTransfer;
-use ValanticSpryker\Zed\NavigationGenerator\NavigationGeneratorConfig;
 use Spryker\Client\CategoryStorage\CategoryStorageClientInterface;
 use Spryker\Zed\Category\Business\CategoryFacadeInterface;
 use Spryker\Zed\Store\Business\StoreFacadeInterface;
+use ValanticSpryker\Zed\NavigationGenerator\NavigationGeneratorConfig;
 
 class NavigationNodeFileGenerator
 {

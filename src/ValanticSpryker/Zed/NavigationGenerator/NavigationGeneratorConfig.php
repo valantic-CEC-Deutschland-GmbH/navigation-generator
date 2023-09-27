@@ -4,8 +4,8 @@ declare(strict_types = 1);
 
 namespace ValanticSpryker\Zed\NavigationGenerator;
 
-use ValanticSpryker\Shared\NavigationGenerator\NavigationGeneratorConstants;
 use Spryker\Zed\Kernel\AbstractBundleConfig;
+use ValanticSpryker\Shared\NavigationGenerator\NavigationGeneratorConstants;
 
 class NavigationGeneratorConfig extends AbstractBundleConfig
 {
