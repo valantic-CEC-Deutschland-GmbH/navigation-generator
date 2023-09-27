@@ -38,7 +38,7 @@ class NavigationGeneratorBusinessFactory extends AbstractBusinessFactory
     }
 
     /**
-     * @return \ValanticSpryker\Zed\Category\Business\CategoryFacadeInterface
+     * @return \Spryker\Zed\Category\Business\CategoryFacadeInterface
      */
     private function getCategoryFacade(): CategoryFacadeInterface
     {
@@ -46,7 +46,7 @@ class NavigationGeneratorBusinessFactory extends AbstractBusinessFactory
     }
 
     /**
-     * @return \ValanticSpryker\Client\CategoryStorage\CategoryStorageClientInterface
+     * @return \Spryker\Client\CategoryStorage\CategoryStorageClientInterface
      */
     private function getCategoryStorageClient(): CategoryStorageClientInterface
     {
