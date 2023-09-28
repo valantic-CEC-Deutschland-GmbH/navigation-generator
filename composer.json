@@ -2,6 +2,7 @@
   "name": "valantic-spryker/navigation-generator",
   "type": "library",
   "description": "Generates navigation-node.csv based on imported category data",
+  "license": "proprietary",
   "require": {
     "php": ">=8.0",
     "spryker/kernel": "^3.0.0",
