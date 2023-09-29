@@ -5,7 +5,8 @@ Adds new console command to spryker, which uses the imported category data to ge
 
 ## Usage:
 1. Add `NavigationGeneratorConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()`
-   ```
+
+   ```php
    <?php
    
    namespace Pyz\Zed\Console;
@@ -31,8 +32,9 @@ Adds new console command to spryker, which uses the imported category data to ge
        }
    }
    ```
-2. Run command:
-    ```
+3. Run command:
+
+   ```bash
     vendor/bin/console data:generate:navigation-node
     ```
 ## Configuration:
